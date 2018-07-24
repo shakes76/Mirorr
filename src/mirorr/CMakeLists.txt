@@ -76,7 +76,7 @@ endif( USE_OPENCL )
 add_executable( mirorr mirorr.cxx itkMirorrUtilities.cxx ${VTK_MIRORR_SRC}) 
 target_link_libraries( mirorr
   ${ITK_LIBRARIES}
-  boost_program_options boost_filesystem boost_system boost_timer
+  ${Boost_LIBRARIES}
 )
 
 if (USE_MIRORR_NON_SYSTEM_BOOST)

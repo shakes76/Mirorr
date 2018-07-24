@@ -28,6 +28,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include <boost/timer/timer.hpp>
 #include <string>
 #include <iomanip>
+#include <iostream>
 #include <exception>
 #include "itkIOUtils.h"
 //#include "../../../../../../usr/local/cuda-7.0/targets/x86_64-linux/include/nppdefs.h"
@@ -384,8 +385,7 @@ MirorrPyramidImplement::GetInterpolatorFromString(std::string interpolator_name)
   } else if(interpolator_name.find("sinc") != std::string::npos) {
     eInterpolatorType = SINC;
   } else {
-    std::cout << "GetInterpolatorFromString(...) Unspecified or unknown interpolator name. "
-    << "Defaulting to bspline." << std::endl;
+    std::cout << "GetInterpolatorFromString(...) Unspecified or unknown interpolator name. Defaulting to bspline." << std::endl;
     eInterpolatorType = BSPLINE;
   }
 
